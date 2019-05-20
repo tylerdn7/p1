@@ -18,8 +18,10 @@ for iter = 1:num_iters
     %
 
 
-
-
+    pred = X * theta;
+    yn = pred - y;
+    theta_change = alpha * (X'*yn) / m;
+    theta = theta - theta_change;
 
 
 
